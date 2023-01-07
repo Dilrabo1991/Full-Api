@@ -1,0 +1,2 @@
+class Commerce < ApplicationRecord
+end

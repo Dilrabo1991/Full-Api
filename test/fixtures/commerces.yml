@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  color: MyString
+  department: MyString
+  price: MyString
+  promotion_code: MyString
+  material: MyString
+  brand: MyString
+  vendor: MyString
+
+two:
+  color: MyString
+  department: MyString
+  price: MyString
+  promotion_code: MyString
+  material: MyString
+  brand: MyString
+  vendor: MyString

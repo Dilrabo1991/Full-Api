@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "82c4080c-093a-46dd-a8d1-c34af8cd7992",
+		"name": "Commerce Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22473861"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\": {\r\n        \"username\": \"romeo\",\r\n        \"email\": \"romeo@gmail.com\",\r\n        \"phone_number\": \"+777777777777\",\r\n        \"password\": \"julietta\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/customers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\": {\r\n        \"username\": \"romeo\",\r\n        \"password\": \"julietta\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Commerces",
+			"item": [
+				{
+					"name": "Commerces all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/commerces",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"commerces"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Commerce Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6bnVsbH0.1V_ugYZHK-e4JECIt2vLm26le8c5M_aCBCTEp4gr-Zs",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"color\": \"purple\",\r\n    \"department\": \"Home, Baby & Games\",\r\n    \"price\": \"20.19\",\r\n    \"promotion_code\": \"PremiumSavings968536\",\r\n    \"material\": \"Wooden\",\r\n    \"brand\": \"Adidas\",\r\n    \"vendor\": \"Amazon\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/commerces",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"commerces"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Commerce Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"color\": \"tan\",\r\n    \"department\": \"Grocery & Tools\",\r\n    \"price\": \"92.75\",\r\n    \"promotion_code\": \"SweetPromo484185\",\r\n    \"material\": \"Concrete\",\r\n    \"brand\": \"Dell\",\r\n    \"vendor\": \"Target\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/commerces/id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"commerces",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Commerce Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/commerces/id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"commerces",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
